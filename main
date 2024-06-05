@@ -1,0 +1,38 @@
+// les19.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+//
+
+
+#include "Test.h"
+#include "Stack.h"
+#include"Checker.h"
+
+
+int main()
+{
+	/*Test t;
+	t.a = 10;
+	t.Inverse();
+	std::cout << t.a;*/
+	/*Stack stack;
+	stack.Push(1);
+	stack.Push(2);
+	stack.Push(3);
+	stack.Print();*/
+	Checker doc("C:/Users/user/source/repos/les19/Test.txt");
+
+	doc.Add('{', '}');
+	doc.Add('(', ')');
+	doc.Add('[', ']');
+	//doc.Add('<', '>');
+
+
+	if (doc.Check())
+		cout << "True";
+	else
+		cout << "false";
+}
+
+//Подцепить очередь и стек в качестве библиотеки
+//Написать класс Checker:
+//1. В конструктор поступает имя файла, который будет считываться
+//2. bool Check(); этот метод проверяет, является ли верной скобочная последовательность в файле
